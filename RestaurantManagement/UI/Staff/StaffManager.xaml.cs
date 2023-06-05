@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace RestaurantManagement.UI.Staff
+namespace RestaurantManagement
 {
     /// <summary>
     /// Interaction logic for StaffManager.xaml
@@ -23,6 +23,48 @@ namespace RestaurantManagement.UI.Staff
         public StaffManager()
         {
             InitializeComponent();
+
+        }
+
+        public void btnSortName_Click(object sender, RoutedEventArgs e)
+        {
+            if (nameSortIcon.Kind == MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom)
+            {
+                nameSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowTop;
+                nameSortIcon.Foreground = Brushes.Green;
+            }
+            else
+            {
+                nameSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom;
+                nameSortIcon.Foreground = Brushes.Red;
+            }
+        }
+
+        public void btnSortSalary_Click(object sender, RoutedEventArgs e)
+        {
+            if (salarySortIcon.Kind == MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom)
+            {
+                salarySortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowTop;
+                salarySortIcon.Foreground = Brushes.Green;
+            }
+            else
+            {
+                salarySortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom;
+                salarySortIcon.Foreground = Brushes.Red;
+            }
+        }
+        public void btnSortPosition_Click(object sender, RoutedEventArgs e)
+        {
+            if (positionSortIcon.Kind == MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom)
+            {
+                positionSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowTop;
+                positionSortIcon.Foreground = Brushes.Green;
+            }
+            else
+            {
+                positionSortIcon.Kind = MaterialDesignThemes.Wpf.PackIconKind.ArrowBottom;
+                positionSortIcon.Foreground = Brushes.Red;
+            }
         }
     }
 }
