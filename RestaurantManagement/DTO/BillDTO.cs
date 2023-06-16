@@ -36,10 +36,12 @@ namespace RestaurantManagement.DTO
         private int iD;
         private int discount;
 
+
         public int ID { get => iD; set => iD = value; }
         public DateTime? DateCheckIn { get => dateCheckIn; set => dateCheckIn = value; }
         public DateTime? DateCheckOut { get => dateCheckOut; set => dateCheckOut = value; }
         public int Status { get => status; set => status = value; }
+
         public int Discount { get => discount; set => discount = value; }
     }
 }

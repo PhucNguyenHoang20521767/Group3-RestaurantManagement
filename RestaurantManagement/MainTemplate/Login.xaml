@@ -8,16 +8,17 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Login" Height="500" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
     <Grid>
-        <Rectangle Height="264" VerticalAlignment="Top">
+        <Rectangle Height="300" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#c0c0c0"></GradientStop>
-                    <GradientStop Color="#ffffff" Offset="0.5"></GradientStop>
-                    <GradientStop Color="#ffffff" Offset="1"></GradientStop>
+                    <GradientStop Color="#FFD12222"></GradientStop>
+                    <GradientStop Color="#FF8A3F26" Offset="0.5"></GradientStop>
+                    <GradientStop Color="#FF8B4828" Offset="1"></GradientStop>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="/MainTemplate/restaurant.png" Width="150" Height="111" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,41,0,0" ></Image>
+        <Image Source="/MainTemplate/restaurant.png" Width="150" Height="150" VerticalAlignment="Top" HorizontalAlignment="Center" >
+        </Image>
         <Rectangle Width="280" Height="200" Fill="White" VerticalAlignment="Bottom" Margin="0,100" RadiusX="15" RadiusY="15">
             <Rectangle.Effect>
                 <DropShadowEffect Color="#FFBBBBBB" Direction="0" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"/>
@@ -55,7 +56,7 @@
 
         </Grid>
         <Button VerticalAlignment="Bottom" Margin="0,85" 
-                Width="150" Content="LOGIN" Background="	#556b2f" 
+                Width="150" Content="LOGIN" Background="#FFF36521" 
                 BorderBrush="#FFF3B021"
                 Click="Login_Click" IsDefault="True" TabIndex="4"></Button>
     </Grid>

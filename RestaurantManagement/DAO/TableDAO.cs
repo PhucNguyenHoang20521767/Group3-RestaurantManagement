@@ -11,7 +11,6 @@ namespace RestaurantManagement.DAO
     public class TableDAO
     {
         private static TableDAO instance;
-
         private TableDAO() { }
 
         public static TableDAO Instance
@@ -36,7 +35,6 @@ namespace RestaurantManagement.DAO
             }
             return tableList;
         }
-
         public List<TableDTO> GetTableListAscending()
         {
             List<TableDTO> tableList = new List<TableDTO>();
@@ -49,8 +47,7 @@ namespace RestaurantManagement.DAO
             }
             return tableList;
         }
-
-        public List<TableDTO> GetTableListDescending()
+        public List<TableDTO>GetTableListDescending()
         {
             List<TableDTO> tableList = new List<TableDTO>();
             string query = "SELECT * FROM TableFood tf order by tf.status desc ";
@@ -62,7 +59,6 @@ namespace RestaurantManagement.DAO
             }
             return tableList;
         }
-
         public void SwitchTable(int id1, int id2)
         {
             string query = "EXEC USP_SwitchTable @idTable1 , @idTable2";
@@ -74,40 +70,35 @@ namespace RestaurantManagement.DAO
             string query = "UPDATE TableFood SET TableFood.status = 'Using' where EXISTS (SELECT * from Bill where TableFood.id = Bill.idTable and Bill.status = 0)";
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
         public bool AddTable(string name)
         {
             string query = string.Format("INSERT TableFood (name) VALUES ('{0}')", name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
         public bool EditTable(string oldname, string newname)
         {
-            string query = string.Format("UPDATE dbo.TableFood Set name = N'{0}' where name = N'{1}'", newname, oldname);
+            string query = string.Format("UPDATE dbo.TableFood Set name = N'{0}' where name = N'{1}'", newname,oldname);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
         public bool DeleteTable(string name)
         {
             string query = string.Format("Delete dbo.TableFood where name = N'{0}'", name);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
-
         public string GetTableStatus(int id)
         {
             string query = string.Format("select status from TableFood where id = {0}", id);
             string status = Convert.ToString(DataProvider.Instance.ExecuteScalar(query));
             return status;
         }
-
         public void UpdateTableStatus(int id)
         {
             string tableStatus = GetTableStatus(id);
             string query;
-            if (tableStatus == "Empty")
+            if(tableStatus=="Empty")
             {
                 query = string.Format("UPDATE TableFood  SET status = 'Using' where id = {0}", id);
             }
@@ -117,6 +108,6 @@ namespace RestaurantManagement.DAO
             }
             DataProvider.Instance.ExecuteNonQuery(query);
         }
-
+        
     }
 }

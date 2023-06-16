@@ -12,7 +12,6 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    WindowState="Normal"
     mc:Ignorable="d">
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
@@ -201,7 +200,7 @@
                     FontSize="18"
                     Foreground="White"
                     Text=" Admin" />
-
+                
                 <materialDesign:PopupBox
                     Margin="5"
                     Foreground="White"

@@ -13,7 +13,6 @@
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
-    WindowState="Maximized"
     mc:Ignorable="d">
     <Grid Margin="10">
         <Grid.RowDefinitions>
