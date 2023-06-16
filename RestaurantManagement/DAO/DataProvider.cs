@@ -11,10 +11,13 @@ namespace RestaurantManagement.DAO
     class DataProvider
     {
         private static DataProvider instance;
+//<<<<<<< HEAD
+//=======
+        //private string connectionString = @"Data Source =LAPTOP-1893MMF3;Initial Catalog = ERSystem; Integrated Security = True";
+//>>>>>>> 5d4f54e9fb8ac16590239e581655e9828b74ebc2
         private string connectionString = @"Data Source=LAPTOP-QGCG3UKS;Initial Catalog=RestaurantManagement_DTB;Integrated Security=True";
-
-        //private string connectionString = @"Data Source=LAPTOP-QGCG3UKS;Initial Catalog=RestaurantManagement_DTB;Integrated Security=True";
-
+        //private string connectionString = @"Data Source=DESKTOP-2D2JACT\SQLEXPRESS;Initial Catalog=ERSystem;Integrated Security=True";
+       //private string connectionString = @"Data Source=LAPTOP-0ASFR8ME\MYSQLSERVER;Initial Catalog=ERSystem;Integrated Security=True";
         private DataProvider() { }
 
         public static DataProvider Instance
@@ -27,7 +30,7 @@ namespace RestaurantManagement.DAO
             private set => instance = value;
         }
 
-        // Trả về trường dữ liệu được thực thi
+        //trả về trường dữ liệu được thực thi
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -59,7 +62,7 @@ namespace RestaurantManagement.DAO
             return data;
         }
 
-        // Trả về số trường dữ liệu được thực thi (insert,update,delete)
+        //Trả về số trường dữ liệu được thực thi (insert,update,delete)
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
@@ -89,7 +92,7 @@ namespace RestaurantManagement.DAO
             return data;
         }
 
-        // Trả về giá trị trong ô đầu tiên (VD: count(*))
+        //Trả về giá trị trong ô đầu tiên (VD: count(*))
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;

@@ -116,11 +116,12 @@ namespace RestaurantManagement.DAO
 
         public bool ResetPassword(string userName)
         {
-            string query = string.Format("UPDATE dbo.Account SET passWord = '123456' where userName = '{0}'", userName);
+            string query = string.Format("UPDATE dbo.Account SET passWord = '2251022057731868917119086224872421513662' where userName = '{0}'", userName);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
         }
+
 
         public List<AccountDTO> GetAccount_PositionListAscending(string username)
         {

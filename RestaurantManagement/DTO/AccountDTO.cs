@@ -26,7 +26,6 @@ namespace RestaurantManagement.DTO
             this.Password = password;
             this.ID = id;
         }
-
         public AccountDTO(DataRow row)
         {
             this.UserName = row["userName"].ToString();

@@ -22,7 +22,6 @@ namespace RestaurantManagement.DAO
             }
             private set => instance = value;
         }
-
         private StaffDAO() { }
 
         public List<StaffDTO> GetListStaff()
@@ -72,7 +71,7 @@ namespace RestaurantManagement.DAO
 
         public bool DeleteStaff(int id)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("Delete FROM Staff where id = " + id);
+            int result = DataProvider.Instance.ExecuteNonQuery("Delete FROM Staff where id = "+id);
 
             return result > 0;
         }
@@ -80,7 +79,7 @@ namespace RestaurantManagement.DAO
         public int CheckPhoneExist(string phone)
         {
 
-            string query = string.Format("select * from Staff where phone = '{0}'", phone);
+            string query = string.Format("select * from Staff where phone = '{0}'",phone);
 
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
@@ -107,17 +106,16 @@ namespace RestaurantManagement.DAO
             return 0;
         }
 
-        public void EditStaff(string name, int sex, string email, string phone, int salary, int position, int id)
+        public void EditStaff(string name, int sex, string email, string phone, int salary, int position,int id)
         {
-            string query = string.Format("UPDATE dbo.Staff SET name = '{0}', sex = {1} , email = '{2}' , phone = '{3}' , salary = {4} , position = {5} where id = {6}", name, sex, email, phone, salary, position, id);
+            string query = string.Format("UPDATE dbo.Staff SET name = '{0}', sex = {1} , email = '{2}' , phone = '{3}' , salary = {4} , position = {5} where id = {6}", name, sex,email,phone,salary,position,id);
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 
-        public void InsertStaff(string name, int sex, string email, string phone, int salary, int position)
+        public void InsertStaff(string  name,int sex, string email,string phone,int salary,int position)
         {
-            DataProvider.Instance.ExecuteQuery("exec USP_InsertStaff @name , @sex , @email , @phone , @salary , @position ", new object[] { name, sex, email, phone, salary, position });
+            DataProvider.Instance.ExecuteQuery("exec USP_InsertStaff @name , @sex , @email , @phone , @salary , @position ", new object[] { name, sex, email, phone, salary,position });
         }
-
         public List<StaffDTO> GetListStaffByNameAscending(string name)
         {
             List<StaffDTO> staffs = new List<StaffDTO>();
@@ -294,7 +292,7 @@ namespace RestaurantManagement.DAO
 
         public string GetNameById(int id)
         {
-            string query = "SELECT name FROM Staff WHERE id = " + id;
+            string query = "SELECT name FROM Staff WHERE id = "+id;
             string name = DataProvider.Instance.ExecuteScalar(query).ToString();
             return name;
         }

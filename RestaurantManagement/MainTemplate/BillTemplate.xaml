@@ -100,7 +100,7 @@
 
         </Grid>
         <Grid Grid.Row="1">
-            <materialDesign:Card Background="#bdb76b" />
+            <materialDesign:Card Background="LightGreen" />
             <TextBlock
                 x:Name="invoice"
                 Grid.Row="0"
@@ -163,7 +163,7 @@
                     FontSize="40"
                     FontStyle="Italic"
                     FontWeight="Bold"
-                    Foreground="	#ff0000"
+                    Foreground="Green"
                     Text="Thanks for choosing us today" />
             </Grid>
             <Grid Grid.Column="1">
