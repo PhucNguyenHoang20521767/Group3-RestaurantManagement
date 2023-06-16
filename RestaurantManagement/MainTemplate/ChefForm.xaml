@@ -5,7 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RestaurantManagement"
         mc:Ignorable="d"
-        WindowState="Normal"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Chef's Form" Height="auto" Width="1000" WindowStartupLocation="CenterScreen" WindowStyle="None">
     <Grid>
@@ -14,7 +13,7 @@
                 <RowDefinition Height="60"/>
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <Grid Height="60" Grid.Row="0" VerticalAlignment="Top" Background="#ff0000" >
+            <Grid Height="60" Grid.Row="0" VerticalAlignment="Top" Background="#FFDA8046" >
                 <Grid.Effect>
                     <DropShadowEffect BlurRadius="1" ShadowDepth="1" Color="#FFACACAC"/>
                 </Grid.Effect>

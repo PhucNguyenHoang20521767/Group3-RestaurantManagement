@@ -18,6 +18,7 @@ namespace RestaurantManagement.DAO
             {
                 if (instance == null) instance = new FoodDAO();
                 return FoodDAO.instance;
+
             }
             private set => instance = value;
         }
@@ -56,7 +57,6 @@ namespace RestaurantManagement.DAO
             }
             return quantity;
         }
-
         public List<FoodDTO> GetListFood()
         {
             List<FoodDTO> list = new List<FoodDTO>();
@@ -86,7 +86,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByNameAscending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -113,7 +112,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByNameDescending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -140,7 +138,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByidCategoryAscending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -167,7 +164,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByidCategoryDescending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -194,7 +190,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByPriceAscending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -221,7 +216,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByPriceDescending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();
@@ -248,7 +242,6 @@ namespace RestaurantManagement.DAO
             }
             return food;
         }
-
         public List<FoodDTO> GetListFoodByQuantityDescending(string name)
         {
             List<FoodDTO> food = new List<FoodDTO>();

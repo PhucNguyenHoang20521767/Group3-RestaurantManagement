@@ -41,5 +41,6 @@ namespace RestaurantManagement.DTO
         public string Name { get => name; set => name = value; }
         public int CategoryID { get => categoryID; set => categoryID = value; }
         public float Price { get => price; set => price = value; }
+
     }
 }

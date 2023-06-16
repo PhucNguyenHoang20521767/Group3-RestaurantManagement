@@ -20,7 +20,6 @@ namespace RestaurantManagement.DTO
             this.Status = status;
             this.Category = category;
         }
-
         public BillInfoDTO(DataRow row)
         {
             this.Id = (int)row["id"];
@@ -32,6 +31,7 @@ namespace RestaurantManagement.DTO
             this.Description = row["description"].ToString();
             this.Status = (int)row["status"];
         }
+
 
         private int id;
         private float totalPrice;
